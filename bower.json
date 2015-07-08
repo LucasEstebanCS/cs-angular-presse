@@ -4,15 +4,26 @@
   "authors": [
     "Damien Suhard <d.suhard@chequesante.com>"
   ],
-  "description": "Demo",
-  "keywords": [],
+  "description": "Angular directive to display a chequesante practitioner",
+  "keywords": ["chequesante"],
   "license": "MIT",
+  "main": [
+    "dist/profile-praticien.min.js",
+    "dist/profile-praticien.min.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:damienCS/cs-angular-profile.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "package.json",
+    "Gruntfile.js",
+    "src"
   ],
   "dependencies": {
     "angular": "1.*",
@@ -23,7 +34,7 @@
     "flag-icon-css": "~0.7.1",
     "angular-google-maps": "~2.1.5",
     "angular-fontawesome": "~0.3.2",
-    "angular-resource": "~1.4.2"
+    "angular-resource": "1.*"
   },
   "devDependencies": {}
 }
