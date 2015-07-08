@@ -24,6 +24,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-angular-template-inline-js');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    //grunt.loadNpmTasks('grunt-angular-templates');
 	//grunt.loadNpmTasks('grunt-karma');
 
 	/**
@@ -37,6 +40,18 @@ module.exports = function(grunt) {
 		@toc 5.
 		*/
 		grunt.initConfig({
+            angular_template_inline_js: {
+                options: {
+                    basePath: __dirname
+                },
+                production: {
+                    src:  src_path + 'profile-praticien.js',
+                    dest: 'dist/tmp.js'
+                }
+            },
+            clean: {
+                dist: [dist_path + "tmp.js"]
+            },
 			concat: {
 				devCss: {
 					src:    [],
@@ -87,7 +102,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    src_path + 'profile-praticien.js',
+					/*src:    src_path + 'profile-praticien.js',*/
+                    src: dist_path + 'tmp.js',
 					dest:   dist_path + 'profile-praticien.min.js'
 				}
 			},
@@ -122,7 +138,7 @@ module.exports = function(grunt) {
 		*/
 		// Default task(s).
 		// grunt.registerTask('default', ['jshint:beforeconcat', 'less:development', 'concat:devJs', 'concat:devCss']);
-		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin', 'uglify:build']);
+		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin' , 'angular_template_inline_js:production', 'uglify:build', 'clean:dist']);
 	
 	}
 	init({});		//initialize here for defaults (init may be called again later within a task)
