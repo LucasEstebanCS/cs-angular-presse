@@ -1,0 +1,24 @@
+{
+  "name": "cs-angular-profile",
+  "version": "1.0.0",
+  "description": "Directive d'affichage d'un profile Cheque Sante",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damienCS/cs-angular-profile.git"
+  },
+  "keywords": [
+    "angular",
+    "chequesante",
+    "profile"
+  ],
+  "author": "Damien Suhard <d.suhard@chequesante.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damienCS/cs-angular-profile/issues"
+  },
+  "homepage": "https://github.com/damienCS/cs-angular-profile#readme"
+}
