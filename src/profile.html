@@ -1,0 +1,145 @@
+<div class="container page-content">
+    <div class="block praticien-fiche ">
+        <div class="row">
+            <div class="col-md-8 text-left">
+                <div class="row main-block">
+                    <div class="col-md-3 col-xs-2">
+                        <div class="thumbnail">
+                            <img ng-src="http://api.local/{{practitioner.profile_url}}" class="avatar"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-10">
+                        <h1>{{practitioner.civility.lib_court}} {{practitioner.name_long}}</h1>
+                        <h2 class="job">{{practitioner.job.lib_long}}</h2>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' dragging="false" options="map.options">
+                    <ui-gmap-marker coords="map.center" idKey="1"></ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <div class="block">
+                    <h2><fa name="info"></fa> Présentation</h2>
+                    <p>{{practitioner.prestataire.presentation}}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div>
+                    <h2><fa name="map-marker"></fa> Adresse</h2>
+                    <p>{{practitioner.address.address}}<br />{{practitioner.address.postal_code + ' ' + practitioner.address.city}}</p>
+                </div>
+
+                <div>
+                    <h2><fa name="phone"></fa> Contact</h2>
+                    <p>Téléphone : {{practitioner.prestataire.phone}}</p>
+                    <p ng-hide="practitioner.prestataire.portable == ''">Mobile : {{practitioner.prestataire.portable}}</p>
+                    <p>Site internet : <a href="{{practitioner.prestataire.website}}" target="_blank">{{practitioner.prestataire.website}}</a></p>
+                </div>
+
+                <div ng-hide="practitioner.syndicat_id === '21' || practitioner.syndicat_id === '20'">
+                    <h2><fa name="users"></fa> Syndicat</h2>
+                    <p>{{practitioner.nom_syndicat}}</p>
+                    <p><img alt="{{practitioner.abbr_syndicat}}" height="100" width="100" ng-src=""></p>
+                </div>
+
+            </div>
+        </div>
+        <div class="block">
+            <div class="row" ng-show="practitioner.prestataire.type_prestataire_id == '2'">
+                <div class="col-sm-12 col-md-12">
+                    <h2><fa name="building"></fa> Société / Structure</h2>
+                    <p>Société : {{practitioner.societe}}<br/>
+                        SIRET : {{practitioner.prestataire.siret}}<br/>
+                        Numéro ADELI  : {{practitioner.adeli}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.payment_types.length > 0">
+                    <h2><fa name="credit-card"></fa> Moyens de paiement</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="paymentType in practitioner.payment_types">{{paymentType.libelle}}</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.practical_informations.length > 0">
+                    <h2><fa name="info-circle"></fa> Informations pratiques</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="practicalInfo in practitioner.practical_informations">{{practicalInfo.libelle}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.degrees.length > 0">
+                    <h2><fa name="graduation-cap"></fa> Formations</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="degree in practitioner.degrees">{{degree.annee}} - {{degree.libelle}}, {{degree.ecole}}</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.experiences.length > 0">
+                    <h2><fa name="stethoscope"></fa> Expériences</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="xp in practitioner.experiences">
+                            <span ng-show="!xp.date_fin">Depuis {{xp.date_debut}}</span><span ng-show="xp.date_fin">De {{xp.date_debut}} à {{xp.date_fin}}</span> :
+                            <span ng-show="xp.type == '1'">Hôpital</span>
+                            <span ng-show="xp.type == '2'">Clinique</span>
+                            <span ng-show="xp.type == '3'">Cabinet</span>
+                            - {{xp.lieu}}<br />{{xp.description}}
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.languages.length > 0">
+                    <h2><fa name="flag"></fa> Langues parlées</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="language in practitioner.languages"><span class="flag-icon flag-icon-squared {{language.icone}}"></span> {{language.libelle_long}}</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.associations.length > 0">
+                    <h2><fa name="institution"></fa> Associations</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="assoc in practitioner.associations">{{assoc.description}}</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.distinctions.length > 0">
+                    <h2><fa name="trophy"></fa> Prix et Distinctions</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="distinction in practitioner.distinctions">{{distinction.description}}</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-6" ng-show="practitioner.publications.length > 0">
+                    <h2><fa name="book"></fa> Travaux et publications</h2>
+                    <p>
+                    <ul>
+                        <li ng-repeat="publication in practitioner.publications">{{publication.description}}</li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>

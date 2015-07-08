@@ -18,16 +18,16 @@ See `bower.json` and `index.html` in the `gh-pages` branch for a full list / mor
 	1. Bower
 		1. add `"cs-profile-praticien": "latest"` to your `bower.json` file then run `bower install` OR run `bower install cs-profile-praticien`
 2. include the files in your app
-	1. `ile-praticien.min.js`
-	2. `ile-praticien.less` OR `ile-praticien.min.css` OR `ile-praticien.css`
-3. include the module in angular (i.e. in `app.js`) - `damienCS.cs-profile-praticien`
+	1. `profile-praticien.min.js`
+	2. `profile-praticien.less` OR `profile-praticien.min.css` OR `profile-praticien.css`
+3. include the module in angular (i.e. in `app.js`) - `cs-profile-praticien`
 
 See the `gh-pages` branch, files `bower.json` and `index.html` for a full example.
 
 
 ## Documentation
-See the `ile-praticien.js` file top comments for usage examples and documentation
-https://github.com/damienCS/cs-profile-praticien/blob/master/ile-praticien.js
+See the `profile-praticien.js` file top comments for usage examples and documentation
+https://github.com/damienCS/cs-profile-praticien/blob/master/profile-praticien.js
 
 
 ## Development
@@ -38,7 +38,7 @@ https://github.com/damienCS/cs-profile-praticien/blob/master/ile-praticien.js
 	3. git commit your changes
 2. copy over core files (.js and .css/.less for directives) to master branch
 	1. `git checkout master`
-	2. `git checkout gh-pages ile-praticien.js ile-praticien.min.js ile-praticien.less ile-praticien.css ile-praticien.min.css`
+	2. `git checkout gh-pages profile-praticien.js profile-praticien.min.js profile-praticien.less profile-praticien.css profile-praticien.min.css`
 3. update README, CHANGELOG, bower.json, and do any other final polishing to prepare for publishing
 	1. git commit changes
 	2. git tag with the version number, i.e. `git tag v1.0.0`

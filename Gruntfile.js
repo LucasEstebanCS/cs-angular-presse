@@ -12,6 +12,9 @@
 
 module.exports = function(grunt) {
 
+    var dist_path = 'dist/';
+    var src_path = 'src/';
+
 	/**
 	Load grunt plugins
 	@toc 2.
@@ -21,7 +24,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-karma');
+	//grunt.loadNpmTasks('grunt-karma');
 
 	/**
 	Function that wraps everything to allow dynamically setting/changing grunt options and config later by grunt task. This init function is called once immediately (for using the default grunt options, config, and setup) and then may be called again AFTER updating grunt (command line) options.
@@ -84,8 +87,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    'ile-praticien.js',
-					dest:   'ile-praticien.min.js'
+					src:    src_path + 'profile-praticien.js',
+					dest:   dist_path + 'profile-praticien.min.js'
 				}
 			},
 			less: {
@@ -93,15 +96,14 @@ module.exports = function(grunt) {
 					options: {
 					},
 					files: {
-						"main.css": "_base.less",
-						"ile-praticien.css": "_ile-praticien.less"
+                        "src/profile-praticien.css": src_path + "profile-praticien.less"
 					}
 				}
 			},
 			cssmin: {
 				dev: {
-					src: ['ile-praticien.css'],
-					dest: 'ile-praticien.min.css'
+					src: ['src/profile-praticien.css'],
+					dest: dist_path + 'profile-praticien.min.css'
 				}
 			}/*,
 			karma: {
