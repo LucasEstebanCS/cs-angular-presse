@@ -17,6 +17,9 @@
 .praticien-fiche .main-block {
   height: 150px;
 }
+.praticien-fiche .avatar {
+  background: #000000;
+}
 .praticien-fiche .angular-google-map-container {
   width: 100%;
   height: 250px;
