@@ -26,5 +26,5 @@ See the `gh-pages` branch, files `bower.json` and `index.html` for a full exampl
 
 
 ## Documentation
-See the `profile-praticien.js` file top comments for usage examples and documentation
-https://github.com/damienCS/cs-profile-praticien/blob/master/profile-praticien.js
+See the `carousel-presse.js` file top comments for usage examples and documentation
+https://github.com/damienCS/cs-profile-praticien/blob/master/carousel-presse.js

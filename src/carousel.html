@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-md-6">
+        <slick infinite="true" speed=300 slides-to-show=3 touch-move="false" slides-to-scroll=1 class="slider" init-onload="true" data="presses" arrows="true" centerMode="true">
+            <div ng-repeat="image in presses">
+                <img ng-src="{{image.logo}}">
+            </div>
+        </slick>
+    </div>
+
+</div>

@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                     basePath: __dirname
                 },
                 production: {
-                    src:  src_path + 'profile-praticien.js',
+                    src:  src_path + 'carousel-presse.js',
                     dest: 'dist/tmp.js'
                 }
             },
@@ -102,9 +102,9 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					/*src:    src_path + 'profile-praticien.js',*/
+					/*src:    src_path + 'carousel-presse.js',*/
                     src: dist_path + 'tmp.js',
-					dest:   dist_path + 'profile-praticien.min.js'
+					dest:   dist_path + 'carousel-presse.min.js'
 				}
 			},
 			less: {
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 			cssmin: {
 				dev: {
 					src: ['src/profile-praticien.css'],
-					dest: dist_path + 'profile-praticien.min.css'
+					dest: dist_path + 'carousel-presse.min.css'
 				}
 			}/*,
 			karma: {
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 		*/
 		// Default task(s).
 		// grunt.registerTask('default', ['jshint:beforeconcat', 'less:development', 'concat:devJs', 'concat:devCss']);
-		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin' , 'angular_template_inline_js:production', 'uglify:build', 'clean:dist']);
+		grunt.registerTask('default', ['jshint:beforeconcatQ', /*'less:development', 'cssmin' ,*/ 'angular_template_inline_js:production', 'uglify:build', 'clean:dist']);
 	
 	}
 	init({});		//initialize here for defaults (init may be called again later within a task)
