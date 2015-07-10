@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                     basePath: __dirname
                 },
                 production: {
-                    src:  src_path + 'profile-praticien.js',
+                    src:  src_path + 'carousel-presse.js',
                     dest: 'dist/tmp.js'
                 }
             },
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					/*src:    src_path + 'profile-praticien.js',*/
+					/*src:    src_path + 'carousel-presse.js',*/
                     src: dist_path + 'tmp.js',
 					dest:   dist_path + 'profile-praticien.min.js'
 				}

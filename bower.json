@@ -1,11 +1,13 @@
 {
-  "name": "cs-profile-praticien-demo",
+  "name": "cs-angular-presse",
   "version": "1.0.0",
   "authors": [
-    "Damien Suhard <d.suhard@chequesante.com>"
+    "Lucas Esteban <l.esteban@chequesante.com>"
   ],
-  "description": "Angular directive to display a chequesante practitioner",
-  "keywords": ["chequesante"],
+  "description": "Angular modular about Chequesante's press",
+  "keywords": [
+    "chequesante"
+  ],
   "license": "MIT",
   "main": [
     "dist/profile-praticien.min.js",
@@ -13,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:damienCS/cs-angular-profile.git"
+    "url": "git@github.com:LucasEstebanCS/cs-angular-presse.git"
   },
   "ignore": [
     "**/.*",
@@ -30,11 +32,10 @@
     "angular-animate": "1.*",
     "angular-sanitize": "1.*",
     "angular-touch": "1.*",
-    "angular-route": "1.*",
-    "flag-icon-css": "~0.7.1",
-    "angular-google-maps": "~2.1.5",
     "angular-fontawesome": "~0.3.2",
-    "angular-resource": "1.*"
+    "angular-resource": "1.*",
+    "angular-slick": "~0.2.1",
+    "angular-route": "~1.4.2"
   },
   "devDependencies": {}
 }
