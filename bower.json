@@ -10,8 +10,8 @@
   ],
   "license": "MIT",
   "main": [
-    "dist/profile-praticien.min.js",
-    "dist/profile-praticien.min.css"
+    "dist/carousel-presse.min.js",
+    "dist/carousel-presse.min.css"
   ],
   "repository": {
     "type": "git",
