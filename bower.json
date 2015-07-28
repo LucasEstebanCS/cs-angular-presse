@@ -10,8 +10,7 @@
   ],
   "license": "MIT",
   "main": [
-    "dist/carousel-presse.min.js",
-    "dist/carousel-presse.min.css"
+    "dist/carousel-presse.min.js"
   ],
   "repository": {
     "type": "git",
