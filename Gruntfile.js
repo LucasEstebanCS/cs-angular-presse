@@ -104,21 +104,20 @@ module.exports = function(grunt) {
 					files:  {},
 					/*src:    src_path + 'carousel-presse.js',*/
                     src: dist_path + 'tmp.js',
-					dest:   dist_path + 'carousel-presse.min.js'
+					dest: dist_path + 'carousel-presse.min.js'
 				}
 			},
 			less: {
 				development: {
-					options: {
-					},
+					options: {},
 					files: {
-                        "src/profile-praticien.css": src_path + "profile-praticien.less"
+                        "dist/carousel-presse.css": src_path + "carousel-presse.less"
 					}
 				}
 			},
 			cssmin: {
 				dev: {
-					src: ['src/profile-praticien.css'],
+					src: [dist_path + 'carousel-presse.css'],
 					dest: dist_path + 'carousel-presse.min.css'
 				}
 			}/*,
@@ -138,7 +137,7 @@ module.exports = function(grunt) {
 		*/
 		// Default task(s).
 		// grunt.registerTask('default', ['jshint:beforeconcat', 'less:development', 'concat:devJs', 'concat:devCss']);
-		grunt.registerTask('default', ['jshint:beforeconcatQ', /*'less:development', 'cssmin' ,*/ 'angular_template_inline_js:production', 'uglify:build', 'clean:dist']);
+		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin' , 'angular_template_inline_js:production', 'uglify:build', 'clean:dist']);
 	
 	}
 	init({});		//initialize here for defaults (init may be called again later within a task)

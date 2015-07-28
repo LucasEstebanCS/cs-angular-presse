@@ -1,6 +1,9 @@
 {
-  "author": "Damien Suhard <d.suhard@chequesante.com>",
-  "name": "cs-profile-praticien-demo",
+  "author": [
+    "Lucas Esteban <l.esteban@chequesante.com>",
+    "Damien Suhard <d.suhard@chequesante.com>"
+  ],
+  "name": "cs-angular-presse",
   "version": "1.0.0",
   "description": "",
   "homepage": "",
