@@ -6,12 +6,14 @@ angular.module('cs-angular-presse', ['ngResource', 'picardy.fontawesome','slick'
             restrict: 'E',
             scope: {
                 apiHost: '@',
-                nbImg : '@',
+                nbImg: '@',
                 autoplay :'@',
-                autoplaySpeed : '@'
+                autoplaySpeed : '@',
+                class :'@'
             },
             replace: true,
             templateUrl: 'src/carousel.html',
+
             link: function(scope, element, attrs) {
             },
             controller: function($scope, $element, $attrs) {
@@ -21,7 +23,7 @@ angular.module('cs-angular-presse', ['ngResource', 'picardy.fontawesome','slick'
                     host = host.substr(0, host.length - 1);
                 }
 
-                var User = $resource('http://demo7607345.mockable.io/rest/presse');
+                var User = $resource(host+'/rest/presses');
                 User.get()
                     .$promise.then(function(data) {
                         if(angular.isDefined(data.reponse))
