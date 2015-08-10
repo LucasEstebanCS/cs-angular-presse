@@ -1,13 +1,3 @@
-/**
-@toc
-2. load grunt plugins
-3. init
-4. setup variables
-5. grunt.initConfig
-6. register grunt tasks
-
-*/
-
 'use strict';
 
 module.exports = function(grunt) {
@@ -15,10 +5,6 @@ module.exports = function(grunt) {
     var dist_path = 'dist/';
     var src_path = 'src/';
 
-	/**
-	Load grunt plugins
-	@toc 2.
-	*/
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -29,17 +15,9 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-angular-templates');
 	//grunt.loadNpmTasks('grunt-karma');
 
-	/**
-	Function that wraps everything to allow dynamically setting/changing grunt options and config later by grunt task. This init function is called once immediately (for using the default grunt options, config, and setup) and then may be called again AFTER updating grunt (command line) options.
-	@toc 3.
-	@method init
-	*/
 	function init(params) {
-		/**
-		Project configuration.
-		@toc 5.
-		*/
 		grunt.initConfig({
+            pkg: grunt.file.readJSON('package.json'),
             angular_template_inline_js: {
                 options: {
                     basePath: __dirname
