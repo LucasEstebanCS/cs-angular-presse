@@ -226,3 +226,15 @@
   color: black;
   opacity: 0.75;
 }
+.press-block ul {
+  list-style: none;
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+.press-block ul li {
+  display: inline-block;
+  margin: 0 5px;
+}

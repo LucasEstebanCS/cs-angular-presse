@@ -29,14 +29,15 @@
   ],
   "dependencies": {
     "angular": "1.*",
-    "angular-fontawesome": "~0.3.2",
+    "angular-fontawesome": "*",
     "angular-resource": "1.*",
-    "angular-slick": "~0.2.1"
+    "angular-slick": "~0.2.1",
+    "cs-angular-webservice": "~1.1.1"
   },
   "devDependencies": {
     "angular-animate": "1.*",
     "angular-touch": "1.*",
     "angular-sanitize": "1.*",
-    "angular-route": "~1.4.2"
+    "angular-route": "1.*"
   }
 }

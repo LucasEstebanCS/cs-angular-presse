@@ -6,8 +6,11 @@
 
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'ngSanitize', 'ngTouch', 'ngAnimate', 'cs-angular-presse']).
-    config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
+angular.module('myApp', ['ngRoute', 'ngSanitize', 'ngTouch', 'ngAnimate', 'cs-angular-presse'])
+    .config(function(csWebserviceLauncherProvider) {
+        csWebserviceLauncherProvider.setBaseUrl('http://api.local/');
+    })
+    .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
         /**
          setup - whitelist, appPath, html5Mode
          @toc 1.
