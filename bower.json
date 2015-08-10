@@ -1,6 +1,6 @@
 {
   "name": "cs-angular-presse",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "authors": [
     "Lucas Esteban <l.esteban@chequesante.com>"
   ],
@@ -10,8 +10,7 @@
   ],
   "license": "MIT",
   "main": [
-    "dist/carousel-presse.min.js",
-    "dist/carousel-presse.min.css"
+    "dist/carousel-presse.min.js"
   ],
   "repository": {
     "type": "git",

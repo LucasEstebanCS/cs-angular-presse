@@ -238,3 +238,9 @@
   display: inline-block;
   margin: 0 5px;
 }
+.press-block ul .grayscale {
+  -webkit-filter: grayscale(1);
+}
+.press-block ul .grayscale:hover {
+  -webkit-filter: grayscale(0);
+}

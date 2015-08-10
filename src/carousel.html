@@ -3,7 +3,7 @@
         <div class="col-md-{{colSize}} col-xs-{{colSize}} col-lg-{{colSize}}">
             <slick infinite="true" speed=300 slides-to-show="{{nbImg}}" touch-move="false" slides-to-scroll=1 class="slider" init-onload="true" data="presses" arrows="true" centerMode="true" ng-class="componentClasses">
                 <div ng-repeat="elt in presses">
-                    <img ng-src="{{elt.Presse.img}}" height="{{height}}" width="{{height}}">
+                    <img ng-src="{{elt.Presse.img}}" height="{{height}}" width="{{height}}" class="grayscale">
                 </div>
             </slick>
         </div>
@@ -12,7 +12,7 @@
     <div ng-if="mode == 'static'">
         <ul>
             <li ng-repeat="elt in presses">
-                <a ng-href="elt.Presse.link" target="_blank"><img ng-src="{{elt.Presse.img}}" height="{{height}}" width="{{height}}"></a>
+                <a ng-href="elt.Presse.link" target="_blank"><img ng-src="{{elt.Presse.img}}" height="{{height}}" width="{{height}}" class="grayscale"></a>
             </li>
         </ul>
     </div>

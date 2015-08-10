@@ -6,7 +6,6 @@ angular.module('cs-angular-presse', ['ngResource', 'picardy.fontawesome','slick'
             restrict: 'E',
             scope: {
                 nbImg : '@',
-                height: '@',
                 autoplay :'@',
                 autoplaySpeed : '@'
             },
